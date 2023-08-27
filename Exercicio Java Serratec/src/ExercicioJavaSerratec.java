@@ -272,7 +272,43 @@ public class ExercicioJavaSerratec {
 			};
 	};
 	private static void exercicio09() {
+		int qtdPessoas = 0, opcaoMenu;
+		String vNomes[] = new String[10];
+		int vIdade[] = new int[10];
 		
+		do{ 
+			System.out.println("Digite o nome: "  );
+			vNomes[qtdPessoas] = input.next();
+			System.out.print("Digite a idade: "  );
+			vIdade[qtdPessoas] = input.nextInt();
+				if( vNomes[qtdPessoas] != "" && vIdade[qtdPessoas] != 0 ){
+				System.out.println("      MENU ");
+				System.out.println("  1 - Incluir \n  2 - Alterar \n  3 - Excluir \n  4 - Sair ");
+				System.out.print("Digite sua opção: ");
+				opcaoMenu = input.nextInt();
+				if(opcaoMenu == 1){
+					System.out.println("Pessoa adicionada com Sucesso ");
+					qtdPessoas++;
+				}else if(opcaoMenu == 2){
+					System.out.print("Digite o nome para alterar ou repita: ");
+					vNomes[qtdPessoas]= input.next();
+					System.out.print("Digite a idade ou repita: "  );
+					vIdade[qtdPessoas]= input.nextInt();
+					qtdPessoas++;
+				}else if(opcaoMenu == 3){
+					System.out.println("Pessoa não adicionada");
+					vNomes[qtdPessoas] = "" ;
+					vIdade[qtdPessoas] = 0;
+				}else if(opcaoMenu == 4){
+					qtdPessoas = 11;
+					break;
+				}else{
+					System.out.println("Opção Invalida, tente novamente ");
+				};
+			}else{
+				System.out.println("Pessoa invalida, tente novamente ");
+			};
+		}while(qtdPessoas < 10);
 	};
 	private static void exercicio10() {
 		
