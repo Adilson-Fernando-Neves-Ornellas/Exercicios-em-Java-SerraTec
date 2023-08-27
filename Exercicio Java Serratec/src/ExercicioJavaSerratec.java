@@ -444,6 +444,23 @@ public class ExercicioJavaSerratec {
 		System.out.println("Soma dos elementos impares: "+ somaImpares );
 	};
 	private static void exercicio15() {
+		int qtd = 0;
+		double numero,soma = 0.0 ;
+		int vNumeros[] = new int[5];
 		
+		do{
+			System.out.print("Digite o numero "+qtd+" dos 5: ");
+			numero = input.nextInt();
+			vNumeros[qtd] = (int) numero;
+			qtd++;
+			if(qtd >= 5){
+				System.out.println("");
+			}
+			soma= soma + numero ;
+		}while(qtd < 5);
+			for (int i = 0 ; i<= (qtd-1) ; i++){
+				System.out.println(" Posição " + i + " foi adicionado o numero: " + vNumeros[i] );
+			}
+			System.out.println(" A somatoria desses numeros é: " + soma);
 	};
 }
