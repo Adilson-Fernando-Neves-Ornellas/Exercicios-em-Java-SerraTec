@@ -99,7 +99,20 @@ public class ExercicioJavaSerratec {
 			System.out.println(" A porcentagem de pessoas na faixa etaria acima de 60 anos é: "+ porcen60 );
 	};
 	private static void exercicio02() {
+		int contador = 0 ;
 		
+		System.out.println("Segue abaixo a verificação dos numeros de 1000 a 2000 que são divisiveis por 11 com resto igual a 2: ");		
+
+		for(int i = 1000; i<=2000; i++){
+			if(i%11 == 2){
+				System.out.print( i + " ");
+				contador++;
+				if (contador == 7) {
+					System.out.println("");
+					contador = 0;
+				};
+			};
+		};
 	};
 	private static void exercicio03() {
 		
