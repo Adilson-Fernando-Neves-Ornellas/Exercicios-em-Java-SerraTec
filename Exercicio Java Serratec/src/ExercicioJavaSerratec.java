@@ -171,7 +171,6 @@ public class ExercicioJavaSerratec {
 		double vCompra[] = {0.0,0.0,0.0,0.0,0.0};
 		double soma = 0.0, valorFinal = 0.0, parar = 1.0, desconto = 0.0;
 		
-		
 		do{
 			System.out.println("Digite 0 para parar, o maximo de produtos que podem ser somados é 5");
 			System.out.print("O valor do produto: ");
@@ -237,7 +236,21 @@ public class ExercicioJavaSerratec {
 		};
 	};
 	private static void exercicio07() {
+		int lado;
+		do{
+			System.out.print("Digite o lado do quadrado entre um e vinte para fazermos a representação: ");
+			lado = input.nextInt();
+			if(lado <1 || lado >20){
+				System.out.println("Lado do quadrado Invalido, tente novamente ");
+			};
+		}while(lado <=0 || lado >=21);
 		
+		for(int i = 1; i  <= lado ; i++){
+			System.out.println("");
+			for( int j =  1 ; j  <= i ; j++){
+				System.out.print("*");
+			}
+		}
 	};
 	private static void exercicio08() {
 		
