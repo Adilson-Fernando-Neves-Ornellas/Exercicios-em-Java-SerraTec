@@ -311,6 +311,30 @@ public class ExercicioJavaSerratec {
 		}while(qtdPessoas < 10);
 	};
 	private static void exercicio10() {
+		int qtd = 0, numero, anterior, maior = 0, posicaoMaior = 0;
+		int vNumeros[] = new int[8];
+		do{
+			System.out.print("Digite os oito numeros um de cada vez: ");
+			numero = input.nextInt();
+			vNumeros[qtd] = numero;
+			if(qtd >= 1){
+				anterior = vNumeros[(qtd-1)];
+				if(numero> anterior){
+					maior = numero;
+					posicaoMaior = qtd;
+				};
+			}else if(qtd == 0) {
+				maior = numero;
+			};
+			qtd++;
+		}while(qtd < 8);
+			System.out.println("");
+			System.out.println("0     1     2     3     4     5     6     7 ");
+			for(int  i = 0 ; i <= (qtd-1) ; i++){
+				System.out.print(vNumeros[i]+"     ");
+			};
+			System.out.println("");
+			System.out.println("O maior valor do vetor informado é " + maior + " e esta no indice " + posicaoMaior +" do vetor");
 		
 	};
 	private static void exercicio11() {
