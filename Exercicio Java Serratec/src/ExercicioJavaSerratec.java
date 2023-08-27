@@ -386,7 +386,37 @@ public class ExercicioJavaSerratec {
 		System.out.println("");
 	};
 	private static void exercicio13() {
-		
+		int qtd = 0, numero;
+				
+		int vNumeros[] = new int[5], vInvertidoNumeros[] =new int[5];
+		do{
+			System.out.print("Digite os cinco numeros um de cada vez: ");
+			numero = input.nextInt();
+			vNumeros[qtd] = numero;
+			qtd++;
+		}while(qtd < 5);
+			System.out.println("");
+			System.out.println("0     1     2     3     4");
+			for(int i = 0 ; i <= (qtd-1) ; i++){
+				System.out.print(vNumeros[i]+"     ");
+			};
+			System.out.println("");
+			System.out.println("VETOR INVERTIDO");
+			System.out.println("0     1     2     3     4");
+			for(int  i = 0 ; i <= (qtd-1) ; i++){
+				if(i==0){
+					vInvertidoNumeros[i] = vNumeros[4];
+				}else if(i==1){
+					vInvertidoNumeros[i] = vNumeros[3];
+				}else if(i==2){
+					vInvertidoNumeros[i] = vNumeros[2];
+				}else if(i==3){
+					vInvertidoNumeros[i] = vNumeros[1];
+				}else if(i==4){
+					vInvertidoNumeros[i] = vNumeros[0];
+				}
+				System.out.print(vInvertidoNumeros[i]+"     ");
+		}
 	};
 	private static void exercicio14() {
 		
