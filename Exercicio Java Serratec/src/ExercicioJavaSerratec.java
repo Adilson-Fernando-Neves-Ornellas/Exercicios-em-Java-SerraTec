@@ -167,7 +167,37 @@ public class ExercicioJavaSerratec {
 		};
 	};
 	private static void exercicio04() {
+		int qtd = 00;
+		double vCompra[] = {0.0,0.0,0.0,0.0,0.0};
+		double soma = 0.0, valorFinal = 0.0, parar = 1.0, desconto = 0.0;
 		
+		
+		do{
+			System.out.println("Digite 0 para parar, o maximo de produtos que podem ser somados é 5");
+			System.out.print("O valor do produto: ");
+			vCompra[qtd] = input.nextInt();
+			parar = vCompra[qtd];
+			qtd++;
+			if(qtd >= 5){
+				break;
+			}
+		}while(parar != 0);
+			for(int i = 0 ; i <= 4 ; i++){
+				soma = soma + vCompra[i];
+			};
+			if(soma >= 500){		
+				for(int i = 1; i <= soma ; i= i+100){
+					desconto = 1.00 + ((i-400)/100);
+					 if (desconto > 25){
+						desconto = 25.00;
+					};
+					valorFinal = soma*(1-(desconto/100));
+				};
+			}else{
+				valorFinal = soma;
+			};
+			System.out.println("\nVALOR DA COMPRA - PORCENTAGEM DE DESCONTO - VALOR FINAL");
+			System.out.println( "   R$:" + soma  + "              " + desconto + "%" + "               R$:" + valorFinal );
 	};
 	private static void exercicio05() {
 		
