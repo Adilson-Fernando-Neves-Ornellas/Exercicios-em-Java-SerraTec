@@ -356,7 +356,34 @@ public class ExercicioJavaSerratec {
 			System.out.println("A soma de todos os valores do vetor é: " + soma);
 	};
 	private static void exercicio12() {
-		
+		int qtd = 0, numero, anterior, valorDivisor , numeroDIvisivel;
+				
+		int vNumeros[] = new int[10], vDivisivel[]= new int[10];
+		do{
+			System.out.print("Digite os dez numeros um de cada vez: ");
+			numero = input.nextInt();
+			vNumeros[qtd] = numero;
+			qtd++;
+		}while(qtd < 10);
+		System.out.print("Informe um valor inteiro positivo: ");
+		valorDivisor = input.nextInt();
+		System.out.println("");
+		System.out.println("0     1     2     3     4     5     6     7     8     9");
+		for(int  i = 0 ; i <= (qtd-1) ; i++){
+			System.out.print(vNumeros[i]+"     ");
+			if(vNumeros[i]%valorDivisor==0){
+				vDivisivel[i] = vNumeros[i];
+			};
+		};
+		System.out.println("");
+		System.out.println("");
+		System.out.print("Os números que são divisíveis por "+ valorDivisor + " são: ");
+		for(int j = 0 ; j <= (qtd-1); j++){
+			if(vDivisivel[j] != 0){
+				System.out.print(vDivisivel[j] + " ");
+			};
+		};
+		System.out.println("");
 	};
 	private static void exercicio13() {
 		
