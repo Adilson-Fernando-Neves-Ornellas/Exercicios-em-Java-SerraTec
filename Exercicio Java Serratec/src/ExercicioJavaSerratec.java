@@ -419,7 +419,29 @@ public class ExercicioJavaSerratec {
 		}
 	};
 	private static void exercicio14() {
-		
+		int qtd = 0, numero, multiplicacaoPares = 1, somaImpares = 0 ;
+				
+		int vNumeros[] = new int[10];
+		do{
+			System.out.print("Digite os dez numeros um de cada vez: ");
+			numero = input.nextInt();
+			vNumeros[qtd] = numero;
+			if(numero%2 != 0){
+				somaImpares = somaImpares + numero;
+			}else if(numero%2==0){
+				multiplicacaoPares = multiplicacaoPares * numero;
+			}
+			qtd++;
+		}while(qtd < 10);
+		System.out.println("");
+		System.out.println("0     1     2     3     4     5     6     7     8     9");
+		for(int  i = 0 ; i <= (qtd-1) ; i++){
+			System.out.print(vNumeros[i]+"     ");
+		}
+		System.out.println("");
+		System.out.println("");
+		System.out.println("Multiplicação dos elementos pares: "+ multiplicacaoPares );
+		System.out.println("Soma dos elementos impares: "+ somaImpares );
 	};
 	private static void exercicio15() {
 		
