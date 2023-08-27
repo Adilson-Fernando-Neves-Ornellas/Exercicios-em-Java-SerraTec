@@ -116,6 +116,55 @@ public class ExercicioJavaSerratec {
 	};
 	private static void exercicio03() {
 		
+		int valor1, valor2, valor3;
+		
+		System.out.print("Digite os três valores um de cada vez, valor 1: ");
+		valor1 = input.nextInt();
+		System.out.print("Digite os três valores um de cada vez, valor 2: ");
+		valor2 = input.nextInt();
+			if(valor2 == valor1){
+				do{
+					System.out.print("Valor 2 igual valor 1, favor digitar outro valor 2: ");
+					valor2 = input.nextInt();
+				}while(valor2 == valor1 );
+			}
+		System.out.print("Digite os três valores um de cada vez, valor 3: ");
+		valor3 = input.nextInt();
+			if(valor3 == valor2 || valor3==valor1){
+				do{
+					System.out.print("Valor 3 igual valor 1 ou 2, favor digitar outro valor 3: ");
+					valor3 = input.nextInt();
+				}while(valor3 == valor2 || valor3 ==valor1);
+			};
+		
+		if(valor1 < valor2 && valor1 < valor3 && valor2<valor3){
+			System.out.println("SEGUE OS VALORES EM ORDEM CRESCENTE:");
+			System.out.println(valor1+ " é o menor valor");
+			System.out.println(valor2+ " é o segundo valor");
+			System.out.println(valor3+ " é o maior valor");
+			System.out.println("SEGUE OS VALORES EM ORDEM DECRESCENTE:");
+			System.out.println(valor3+ " é o maior valor");
+			System.out.println(valor2+ " é o segundo valor");
+			System.out.println(valor1+ " é o menor valor");
+		}else if (valor1 > valor2 && valor1<valor3){
+			System.out.print("\n  SEGUE OS VALORES EM ORDEM CRESCENTE:");
+			System.out.print("\n" +valor2+ " é o menor valor");
+			System.out.print("\n" +valor1+ " é o segundo valor");
+			System.out.print("\n" +valor3+ " é o maior valor");
+			System.out.print("\n  SEGUE OS VALORES EM ORDEM DECRESCENTE:");
+			System.out.print("\n" +valor3+ " é o maior valor");
+			System.out.print("\n" +valor1+ " é o segundo valor");
+			System.out.print("\n" +valor2+ " é o menor valor");
+		}else if (valor1 > valor2 && valor1>valor3 && valor2 > valor3){
+			System.out.print("\n  SEGUE OS VALORES EM ORDEM CRESCENTE:");
+			System.out.print("\n" +valor3+ " é o menor valor");
+			System.out.print("\n" +valor2+ " é o segundo valor");
+			System.out.print("\n" +valor1+ " é o maior valor");
+			System.out.print("\n  SEGUE OS VALORES EM ORDEM DECRESCENTE:");
+			System.out.print("\n" +valor1+ " é o maior valor");
+			System.out.print("\n" +valor2+ " é o segundo valor");
+			System.out.print("\n" +valor3+ " é o menor valor");
+		};
 	};
 	private static void exercicio04() {
 		
