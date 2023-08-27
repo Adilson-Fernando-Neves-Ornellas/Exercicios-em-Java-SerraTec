@@ -200,7 +200,21 @@ public class ExercicioJavaSerratec {
 			System.out.println( "   R$:" + soma  + "              " + desconto + "%" + "               R$:" + valorFinal );
 	};
 	private static void exercicio05() {
+		int lado;
+		do{
+			System.out.print("Digite o lado do quadrado entre um e vinte para fazermos a representação: ");
+			lado = input.nextInt();
+			if(lado <1 || lado >20){
+				System.out.println("Lado do quadrado Invalido, tente novamente ");
+			};
+		}while(lado <=0 || lado >=21);
 		
+		for(int i = 1; i  <= lado ; i++){
+			System.out.println("");
+			for( int j =  1 ; j  <= lado ; j++){
+				System.out.print("* ");
+			};
+		};
 	};
 	private static void exercicio06() {
 		
