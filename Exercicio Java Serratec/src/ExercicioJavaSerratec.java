@@ -253,7 +253,23 @@ public class ExercicioJavaSerratec {
 		}
 	};
 	private static void exercicio08() {
-		
+		int numero,divisores = 0;
+		System.out.print("Digite um numero para saber se ele é primo ou não: ");
+		numero = input.nextInt();
+			
+			for( int i = 1; i <= numero; i++){
+				if(numero % i == 0){
+					divisores++;
+				};
+			};
+			
+			if(divisores == 2){
+				System.out.println(numero + " Sim, é primo");
+			}else if(numero < 0){
+				System.out.print("Não existe primo de nennhum numero negativo");
+			}else{
+				System.out.println(numero + " Não é um número primo");
+			};
 	};
 	private static void exercicio09() {
 		
